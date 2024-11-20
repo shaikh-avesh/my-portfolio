@@ -1,0 +1,465 @@
+ /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4; /* Light background for the page */
+}
+
+/* Navbar Styling */
+header {
+  width: 100%;
+  background-color: #ffffff;
+  color: #333;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: #343333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.logo img{
+  justify-content: center;
+  width: 120px;
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #343333;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #ff9800;
+}
+.header-hidden {
+  background-color: transparent !important; /* Make the background transparent */
+  box-shadow: none !important; /* Remove any shadow if present */
+}
+/* Hamburger Menu */
+#hamburger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  text-align: left;
+  background-image: linear-gradient(to right, #e0e0e0, #ffffff); /* Light gradient background */
+  padding: 2rem;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+}
+
+.text-content {
+  width: 60%; /* Adjust as needed */
+  /* max-width: 800px; */
+}
+
+.image-content {
+  width: 40%; /* Adjust as needed */
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.image-content img {
+  width: 80%;
+  height: auto;
+  border-radius: 50%;
+  /* border-radius: 10px;  */
+}
+
+
+/* Heading and Subheading */
+h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #ff9800;
+}
+
+
+h1 span {
+  color: #000000;
+}
+
+.tagline {
+  font-size: 2rem;
+  color: #ff9800;
+  margin-top: 0.5rem;
+ 
+
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 1rem 0;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  color: #121212;
+  background-color: #ff9800;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0px 5px 15px rgba(255, 152, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(255, 152, 0, 0.5);
+}
+
+/* Social Media Links */
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: #333;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #ff9800;
+}
+  /* Typewriter Effect */
+#typewriter-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid #ff9800; /* Cursor effect */
+  width: 0;
+  animation: typing 2.4s steps(30) 1s forwards, blinkCaret .75s step-end infinite;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  100% { width: 10.5em; }
+}
+
+@keyframes blinkCaret {
+  50% { border-color: transparent; }
+}
+/* About Section Styling */
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+  background: linear-gradient(to right, white, rgb(151, 197, 218));
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.about-content {
+  max-width: 600px;
+  padding: 20px;
+  animation: fadeIn 2s ease-out;
+}
+.section-title {
+  font-size: 3.5rem;
+  color: #332424;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.about-content h2 {
+  color: #e01321;
+}
+
+.skills {
+  margin-top: 30px;
+}
+
+.skills h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+.skills ul li {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* About Image Styling */
+.about-image {
+  width: 50%;
+  text-align: center;
+  animation: slideIn 2s ease-out;
+}
+
+.photo {
+  width: 80%;
+  height: auto;
+  transform: translate(20);
+ }
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+#projects1{
+ background-color: #f1efef;
+    
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Centers cards horizontally */
+  align-items: center;     /* Centers cards vertically */
+  flex-wrap: wrap;         /* Wraps cards into multiple rows if necessary */
+  gap: 30px;
+  margin-left: 100px;
+  min-height: 80vh;       /* Ensures the container takes up the full viewport height */
+  max-width: 1200px;
+  margin-bottom: 80px;
+}
+
+
+/* Project Card Styles */
+.project-card {
+  transform: translateY(5px);
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+  width: calc(33.33% - 30px); /* 3 cards per row for larger screens */
+}
+/* Project Section Title */
+#pr-h1 {
+  font-weight: 700;
+  color: #888682;
+  text-align: right;
+  padding-right: 100px;
+  padding-top: 90px;
+}
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit:cover;
+}
+
+.project-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin: 10px 0;
+}
+
+.project-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.view-project {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.view-project:hover {
+  background-color: #0056b3;
+}
+/* Footer Container Styling */
+/* General Footer Styling */
+.portfolio-footer {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 40px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+}
+
+/* Branding Section */
+.footer-branding h2 {
+  font-weight: 700;
+  color: #343333;
+  font-size: 24px;
+}
+
+.footer-branding p {
+  font-size: 15px;
+  color: #6a6969;
+  margin: 0;
+}
+
+/* Quick Links Section */
+.footer-links h3, .footer-contact h3, .footer-social h3 {
+  font-weight: 600;
+  color: #343333;
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  color: #6a6969;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #dfd1d1;
+}
+
+/* Contact Section */
+.footer-contact p {
+  font-size: 15px;
+  color: #6a6969;
+  margin: 5px 0;
+}
+
+.footer-contact a {
+  color: #6a6969;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #dfd1d1;
+}
+
+/* Social Media Section */
+.footer-social .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-social .social-icons a {
+  color: black;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.footer-social .social-icons a:hover {
+  color: #dfd1d1;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 1px solid #ede7e7;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #343333;
+  margin: 0;
+}
+

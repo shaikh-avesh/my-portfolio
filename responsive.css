@@ -1,0 +1,288 @@
+/* NAVBAR */
+/* Mobile Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+      justify-content: space-between;
+    }
+  
+    /* Logo adjustments for small screens */
+    .logo img {
+      width: 100px;
+    }
+     /* Hide logo when hamburger is clicked */
+    .logo.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+    /* Hide navigation links on small screens and show the hamburger menu */
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      text-align: center;
+      padding-top: 1rem;
+      background-color:white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+      margin-top: 10px;
+    }
+  
+    #hamburger-menu {
+      display: block;
+    }
+  
+    /* When the menu is active, show the nav links */
+    .nav-links.active {
+      display: flex;
+    }
+  
+    /* Navbar Links when in mobile view */
+    .nav-links a {
+      font-size: 1.2rem;
+      padding: 1rem;
+      color: #343333;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s;
+    }
+  
+    .nav-links a:hover {
+      background-color: #ff9800;
+      color: white;
+    }
+  }
+  
+  /* Show Hamburger Menu when navbar collapses */
+  @media (max-width: 736px) {
+    #hide {
+      display: none;
+    }
+  }
+  
+/* HOME */
+@media (max-width: 736px) {
+
+    #typewriter-text{
+      font-size: 35px;
+    }
+    .logo img{
+      width: 100px;
+    }
+    #content {
+      display:block;
+    }
+    #text-content {
+      width: 100%; /* Adjust as needed */
+      /* max-width: 800px; */
+    }
+    .image-content img {
+      display: none;
+    }
+
+    #social-links-mobile{
+      display: none;
+    }
+    #header{
+      position:absolute;
+    }
+  }
+/* ABOUT */
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    #about {
+      flex-direction: column;
+      padding: 60px 1px;
+    }
+  
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-image {
+      width: 82%;
+      margin-top: 20px;
+    }
+  
+    .about-content {
+      max-width: 100%;
+    }
+  
+    .section-title {
+      font-size: 2.5rem;
+    }
+  
+    .about-description {
+      font-size: 1rem;
+    }
+  
+    .skills h3 {
+      font-size: 1.4rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-content {
+      padding: 20px;
+      font-size: 1rem;
+    }
+  
+    .about-description {
+      font-size: 1rem;
+    }
+  
+    .skills h3 {
+      font-size: 1.3rem;
+    }
+  
+    .about-image {
+      width: 100%;
+    }
+  
+    .photo {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-content h2 {
+      font-size: 1.2rem;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .about-description {
+      font-size: 0.9rem;
+    }
+  
+    .skills h3 {
+      font-size: 1.2rem;
+    }
+  
+    .about-image {
+      width: 100%;
+      margin-top: 10px;
+    }
+}
+
+/* PROJECTS */
+/* Responsive Styles for smaller screens */
+@media (max-width: 1024px) {
+    .project-card {
+      width: calc(50% - 30px); /* 2 cards per row on medium screens */
+    }
+  
+    #pr-h1 {
+      text-align: center;
+      padding-right: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      margin-left: 0;
+      gap: 50px; /* Reduced gap for smaller screens */
+      padding: 0 20px;
+    }
+  
+    .project-card {
+      width: 80%; /* Full width on smaller screens */
+    }
+  
+    #pr-h1 {
+      font-size: 2.5rem; /* Smaller title font size */
+      text-align: center;
+      padding-top: 50px;
+    }
+  
+    .project-title {
+      font-size: 1.2rem; /* Smaller project title font size */
+    }
+  
+    .project-description {
+      font-size: 0.85rem; /* Smaller description font size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project-title {
+      font-size: 1rem; /* Further reduce project title size */
+    }
+  
+    .project-description {
+      font-size: 0.8rem; /* Further reduce project description size */
+    }
+  
+    #pr-h1 {
+      font-size: 1.8rem;
+      padding-top: 40px; /* Adjust padding for smaller screens */
+    }
+}
+/* /* Mobile and Tablet Responsiveness */
+@media screen and (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-branding,
+    .footer-links,
+    .footer-contact,
+    .footer-social {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .footer-branding h2 {
+      font-size: 22px;
+    }
+  
+    .footer-links h3,
+    .footer-contact h3,
+    .footer-social h3 {
+      font-size: 18px;
+    }
+  
+    .footer-links ul li a {
+      font-size: 14px;
+    }
+  
+    .footer-contact p,
+    .footer-social .social-icons a {
+      font-size: 14px;
+    }
+  
+    .footer-bottom p {
+      font-size: 12px;
+    }
+  }
+  
+  /* Extra Small Screens (Mobile Portrait) */
+  @media screen and (max-width: 480px) {
+    .footer-branding h2 {
+      font-size: 20px;
+    }
+  
+    .footer-links h3,
+    .footer-contact h3,
+    .footer-social h3 {
+      font-size: 16px;
+    }
+  
+    .footer-links ul li a {
+      font-size: 13px;
+    }
+  
+    .footer-contact p,
+    .footer-social .social-icons a {
+      font-size: 13px;
+    }
+  
+    .footer-bottom p {
+      font-size: 10px;
+    }
+  }  
+  

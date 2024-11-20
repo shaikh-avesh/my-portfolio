@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Avesh Shaikh</title>
+    <link rel="icon" type="image/x-icon" href="Image/logo1.webp">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="contact-me.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="Image/logo.png" alt="ShaikhScript Logo" />
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contact-form-container" id="contact-form-container">
+            <div class="form-header">
+                <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="Rocket Icon" class="icon">
+                <h2>Contact Me</h2>
+                <p>Drop Me a Message</p>
+            </div>
+            <form id="contact-form" onsubmit="showNotification(); return false;">
+                <div class="form-group">
+                    <input type="text" name="from_name" placeholder="Your Name *" required>
+                    <input type="email" name="email" placeholder="Your Email *" required>
+                    <input type="text" name="phone" placeholder="Your Phone Number *" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message *" required></textarea>
+                </div>
+                <input type="hidden" name="to_name" value="Avesh Shaikh">
+                <button type="submit">Send Message</button>
+            </form>
+
+        </div>
+        <div id="notification" class="notification">
+            Thank you! Your message has been sent.
+        </div>
+    </main>
+
+    <footer class="portfolio-footer">
+        <div class="footer-container">
+
+            <!-- Branding Section -->
+            <div class="footer-branding">
+                <h2>Avesh Shaikh</h2>
+                <p>Creating innovative solutions with passion for front-end development and design.</p>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <!-- <li><a href="#projects">Projects</a></li> -->
+                    <li><a href="contact-me.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="footer-contact">
+                <h3>Get in Touch</h3>
+                <p>Email: <a href="mailto:aveshshaikh.work.@gmail.com">aveshshaikh.work.@gmail.com</a></p>
+                <p>Phone: <a href="tel:+91 9328319608">+91 9328319608</a></p>
+            </div>
+
+            <!-- Social Links Section -->
+            <div class="footer-social">
+                <h3>Follow Me</h3>
+                <div class="social-icons">
+                    <a href="https://github.com/shaikh-avesh" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mohammad-avesh-shaikh-24878a262?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/shaikh_avesh_07?igsh=eHJvd2p4bnR1MDUz" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Avesh Shaikh. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- EmailJS script -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your user ID
+        (function () {
+            emailjs.init("ZhAWYm1hPRzBmp5zs"); // Replace with your actual EmailJS User ID
+        })();
+
+        // Handle form submission
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting the default way
+
+            // Send the email via EmailJS
+            emailjs.sendForm('service_vwc28af', 'template_h525znl', this)
+                .then(function () {
+                    alert('Your message has been sent successfully!');
+
+                    // Optionally reset the form after successful submission
+                    document.getElementById('contact-form').reset();
+                }, function (error) {
+                    alert('Failed to send the message. Please try again later.');
+                });
+        });
+
+        // Optional: Send the form submission on Enter key press (skip for textareas)
+        document.getElementById('contact-form').addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' && event.target.tagName !== 'TEXTAREA') {
+                event.preventDefault(); // Prevent default behavior (like form line break)
+                document.getElementById('contact-form').dispatchEvent(new Event('submit')); // Trigger form submission
+            }
+        });
+
+
+        function showNotification() {
+            const notification = document.getElementById('notification');
+            notification.classList.add('show');
+
+            // Hide notification after 3 seconds
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
